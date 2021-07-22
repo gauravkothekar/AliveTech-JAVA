@@ -1,0 +1,100 @@
+class Car{
+	int topSpeed=0;
+	String Brand;
+	String Color;
+	int noOfSeats;
+	int noOfWheels;
+	boolean hasSunRoof;
+
+	Car(int topSpeed,String Brand,String Color,int noOfSeats,int noOfWheels, boolean hasSunRoof){
+		this.topSpeed = topSpeed;
+		this.Brand = Brand;
+		this.Color =Color;
+		this.noOfSeats =noOfSeats;
+		this.noOfWheels = noOfWheels;
+		this.hasSunRoof = hasSunRoof;
+		this.PrintDetails();		
+	}
+
+	Car(int topSpeed,String Brand,int noOfSeats,int noOfWheels, boolean hasSunRoof){
+		
+		this(topSpeed,Brand,"White",noOfSeats,noOfWheels,hasSunRoof);		
+	}
+	
+	Car(int topSpeed,String Brand,String Color,int noOfWheels, boolean hasSunRoof){
+		this(topSpeed,Brand,Color,0,noOfWheels,hasSunRoof);
+	}
+
+	
+		
+	int PrintDetails(){
+		System.out.println(this.topSpeed);
+		System.out.println(this.Brand);
+		System.out.println(this.Color);
+		System.out.println(this.noOfSeats);
+		System.out.println(this.noOfWheels);
+		System.out.println(this.hasSunRoof);
+return 0;
+	}
+
+	public static void main(String [] args){
+		
+	
+		Car Ford = new Car(200,"Ford","Red",4,4,false);
+		//Ford.Color = "Red";
+
+		
+		//Car MG = new Car(150,"MG","White",4,4,true);
+		//MG.Color = "White";
+
+		Car Audi = new Car(150,"Audi",4,4,true);
+
+		Car BMW = new Car(150,"BMW","BLACK",4,true);
+
+Car Jag = new Car();
+		
+		
+
+//System.out.println(Ford.PrintDetails());
+
+	}
+}
+
+
+
+
+
+class Parent{
+	
+Parent(int a){
+	System.out.println("Parent Obj Created");
+}
+	void f1(){
+		System.out.println("Inside f1");
+	}
+}
+
+class Child extends Parent{
+	
+	void f2(){
+		System.out.println("Inside f2");
+	
+	}
+	
+	static void f3(){
+		System.out.println("Inside f3");		
+	}
+}
+
+class Driver{
+	public static void main(String args[]){
+		Child.f3();
+		Child c = new Child();
+		c.f2();	
+		c.f1();		
+	}
+}
+
+
+
+
