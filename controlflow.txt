@@ -1,0 +1,35 @@
+package keysuper;
+class Parent 
+{
+    int a;
+    Parent(int a)
+    {
+        this.a=a;
+        System.out.println("inside parent with args");
+    }
+    Parent()
+    {
+        this(6);
+        System.out.println("inside parent without args");
+    }   
+}
+class Child extends Parent
+{
+    Child(int a)
+    {
+        super();
+        System.out.println("inside Child with args");
+    }
+    Child()
+    {
+        this(4);
+        System.out.println("inside the Child without args");
+    }
+    
+}
+public class Keysuper 
+{
+    public static void main(String[] args) {
+        Child c1=new Child();
+    }
+}
