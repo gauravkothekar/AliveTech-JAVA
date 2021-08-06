@@ -1,0 +1,134 @@
+package com.student.admision;
+
+public class Subjects {
+	String subjectName;
+	int totalMarks= 100;
+	String marksObtained;
+	
+	Subjects(String subjectName) {
+		this.subjectName = subjectName;
+		
+	}
+	
+	
+}
+
+
+
+package com.student.admision;
+
+import java.util.Scanner;
+
+public class Student {
+	
+	String name;
+	int rollNo;
+	char grade;
+	Subjects [] subjectArr = new Subjects[3];
+		
+	public Student(String name, int rollNo, String S1, String S2, String S3) {	
+			
+		this.name = name;
+		this.rollNo = rollNo;
+		
+		int a=0;
+					
+		switch(S1){
+			case "Maths":
+				Subjects a1 = new Subjects("Maths");
+				subjectArr[a]=a1; a++;
+				break;
+				
+			case "English":
+				Subjects a2 = new Subjects("English");
+				subjectArr[a]=a2; a++;
+				break;
+				
+			case "Physics":
+				Subjects a3 = new Subjects("Physics");
+				subjectArr[a]=a3; a++;
+				break;
+				
+			case "Chemistry":
+				Subjects a4 = new Subjects("Chemistry");
+				subjectArr[a]=a4; a++;
+				break;
+		}
+		
+		switch(S2){
+		case "Maths":
+			Subjects a1 = new Subjects("Maths");
+			subjectArr[a]=a1; a++;
+			break;
+			
+		case "English":
+			Subjects a2 = new Subjects("English");
+			subjectArr[a]=a2; a++;
+			break;
+			
+		case "Physics":
+			Subjects a3 = new Subjects("Physics");
+			subjectArr[a]=a3; a++;
+			break;
+			
+		case "Chemistry":
+			Subjects a4 = new Subjects("Chemistry");
+			subjectArr[a]=a4; a++;
+			break;
+	}
+		
+		switch(S3){
+		case "Maths":
+			Subjects a1 = new Subjects("Maths");
+			subjectArr[a]=a1; a++;
+			break;
+			
+		case "English":
+			Subjects a2 = new Subjects("English");
+			subjectArr[a]=a2; a++;
+			break;
+			
+		case "Physics":
+			Subjects a3 = new Subjects("Physics");
+			subjectArr[a]=a3; a++;
+			break;
+			
+		case "Chemistry":
+			Subjects a4 = new Subjects("Chemistry");
+			subjectArr[a]=a4; a++;
+			break;
+	}
+	}
+
+	public void PrintDetails() {
+		System.out.println(this.name);
+		System.out.println(this.rollNo);
+	
+		for(int a=0;a<3;a++) {
+					System.out.println(subjectArr[a].subjectName);
+		}
+	}
+
+
+
+
+
+	}
+
+
+
+
+
+
+package com.student.admision;
+
+public class Driver {
+
+	public static void main(String[] args) {
+		
+		Student Gopal = new Student("Gopal",37,"Maths","Physics","Chemistry");
+		Gopal.PrintDetails();
+	}
+
+}
+
