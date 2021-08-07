@@ -1,0 +1,160 @@
+package com.student.admision;
+
+import java.util.Scanner;
+
+public class Student {
+
+	String name;
+	int rollNo;
+	char grade;
+	Subjects[] subjectArr = new Subjects[3];
+
+	public Student(String name, int rollNo, String S1,int marks1, String S2,int marks2, String S3,int marks3) {
+
+		this.name = name;
+		this.rollNo = rollNo;
+
+		int a = 0;
+
+		switch (S1) {
+		case "Maths":
+			Subjects a1 = new Subjects("Maths");
+			a1.marksObtained = marks1;
+			subjectArr[a] = a1;
+			a++;
+			break;
+
+		case "English":
+			Subjects a2 = new Subjects("English");
+			subjectArr[a] = a2;
+			a2.marksObtained = marks1;
+			a++;
+			break;
+
+		case "Physics":
+			Subjects a3 = new Subjects("Physics");
+			subjectArr[a] = a3;
+			a3.marksObtained = marks1;
+			a++;
+			break;
+
+		case "Chemistry":
+			Subjects a4 = new Subjects("Chemistry");
+			subjectArr[a] = a4;
+			a4.marksObtained = marks1;
+			a++;
+			break;
+		}
+
+		switch (S2) {
+		case "Maths":
+			Subjects a1 = new Subjects("Maths");
+			subjectArr[a] = a1;
+			a1.marksObtained = marks2;
+			a++;
+			break;
+
+		case "English":
+			Subjects a2 = new Subjects("English");
+			subjectArr[a] = a2;
+			a2.marksObtained = marks2;
+			a++;
+			break;
+
+		case "Physics":
+			Subjects a3 = new Subjects("Physics");
+			subjectArr[a] = a3;
+			a3.marksObtained = marks2;
+			a++;
+			break;
+
+		case "Chemistry":
+			Subjects a4 = new Subjects("Chemistry");
+			subjectArr[a] = a4;
+			a4.marksObtained = marks2;
+			a++;
+			break;
+		}
+
+		switch (S3) {
+		case "Maths":
+			Subjects a1 = new Subjects("Maths");
+			subjectArr[a] = a1;
+			a1.marksObtained = marks3;
+			a++;
+			break;
+
+		case "English":
+			Subjects a2 = new Subjects("English");
+			subjectArr[a] = a2;
+			a2.marksObtained = marks3;
+			a++;
+			break;
+
+		case "Physics":
+			Subjects a3 = new Subjects("Physics");
+			subjectArr[a] = a3;
+			a3.marksObtained = marks3;
+			a++;
+			break;
+
+		case "Chemistry":
+			Subjects a4 = new Subjects("Chemistry");
+			subjectArr[a] = a4;
+			a4.marksObtained = marks3;
+			a++;
+			break;
+		}
+	}
+
+	public void PrintDetails() {
+
+		for (int a = 0; a < 3; a++) {
+
+			System.out.println(subjectArr[a].subjectName);
+			System.out.println(subjectArr[a].marksObtained);
+			
+		}
+		
+	}
+
+}
+
+
+
+
+
+
+package com.student.admision;
+
+public class Driver {
+
+	public static void main(String[] args) {
+		
+		Student Gopal = new Student("Gopal",37,"Maths",70,"Physics",90,"Chemistry",80);
+		Gopal.PrintDetails();
+		
+
+	}
+
+}
+
+
+
+
+
+
+package com.student.admision;
+
+public class Subjects {
+	String subjectName;
+	static int totalMarks= 100;
+	int marksObtained;
+	
+	Subjects(String subjectName) {
+		this.subjectName = subjectName;
+		
+	}	
+
+	
+}
