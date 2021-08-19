@@ -1,0 +1,64 @@
+**Bmw_Three_series
+
+package Cars;
+
+public class Bmw_Three_series implements BMW{
+                                                            
+	public void Drive() {
+		
+	}
+
+
+	public void Stop() {
+		
+	}
+
+
+	public void Brand() {
+		
+	}
+
+	public static void main(String[] args) {
+		Bmw_Three_series bts = new Bmw_Three_series();
+		
+		bts.Brand();
+		bts.Drive();
+		bts.Stop();
+	}
+}
+
+
+**car
+package Cars;
+
+public interface Car{
+	
+	void Drive();
+	
+	void Stop();
+}
+
+**package Cars;
+
+public interface BMW extends Car{
+	void Brand();
+}
+
+
+**
+package Cars;
+
+public interface Car{
+	
+	void Drive();
+	
+	void Stop();
+}
+
+
+
+package Cars;
+
+public interface BMW extends Car{
+	void Brand();
+}

@@ -1,0 +1,116 @@
+
+
+*** iphone12
+public class iphone12 extends Iphone8 {
+
+	
+	void security() {
+		System.out.println("iphone12 security");
+
+	}
+	void volumeRockers() { 
+		System.out.println("Phones volume rockers");
+	}
+	
+	public static void main(String[] args) {
+		iphone12 i12 = new iphone12();
+		
+		i12.Mute();
+		i12.security();
+		i12.Display();
+		i12.Touch();
+		i12.powerButton();
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+***iphone
+public abstract class IPhones {
+	
+	IPhones (){
+		
+	}
+	abstract void powerButton();
+	
+	abstract void volumeRockers();
+	
+	abstract void Display();
+	
+	abstract void Touch();
+	
+	final void Mute() {
+		System.out.println("Iphone mute slider");
+	}
+}
+
+
+
+***iphone8
+
+public abstract class Iphone8 extends IPhones {
+
+	
+	void powerButton() {
+		System.out.println("IPhone8 Power button");
+		
+	}
+	
+	
+	
+	
+	void Display() {
+		System.out.println("IPhone8 Display");
+	}
+	
+	void Touch() {
+		System.out.println("IPhone8 Touch");
+	}
+	
+	abstract void security();
+
+
+}
+
+
+
+***phones
+
+public class Phones {
+	
+	void powerButton() {
+		System.out.println("Phones Power button");
+		
+	}
+	
+	void volumeRockers() { 
+		System.out.println("Phones volume rockers");
+	}
+	
+	void Display() {
+		System.out.println("Phones Display");
+	}
+	
+	void Touch() {
+		System.out.println("Phones Touch");
+	}
+	
+	
+	public static void main(String[] args) {
+		Phones p = new Phones();
+		p.powerButton();
+		p.volumeRockers();
+		p.Display();
+		p.Touch();
+	}
+}

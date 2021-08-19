@@ -1,0 +1,56 @@
+package RunTimePolymorphism;
+
+import java.util.Iterator;
+
+public class Manager extends Employee {
+	
+	
+	String name;
+	int Salary;
+	
+	void getDetails() {
+		System.out.println("Name is "+ name+" "+"Salary is "+Salary);
+	}
+	
+	
+	public static void main(String[] args) {
+		
+		Employee employee = new Employee();
+		employee.name = "Saurabh";
+		
+		
+		Manager manager = new Manager();
+		manager.name = "Prashant";
+		manager.Salary = 10000;
+		
+		Employee [] emp = new Employee[2]; 
+		emp[0] = manager;
+		emp[1] = employee;
+		
+		for(int i = 0; i<emp.length;i++) {
+			emp[i].getDetails();
+		
+		}
+		
+		
+		
+		
+	}
+
+}
+
+
+
+***
+package RunTimePolymorphism;
+
+public class Employee {
+	
+	
+	String name;
+	
+	void getDetails() {
+		System.out.println("Name is "+ name);
+	}
+
+}
