@@ -1,0 +1,52 @@
+package CollectionsDemoList;
+
+import java.util.ArrayList;
+
+public class ListDemo {
+	public static void main(String[] args) {
+	
+		int[] a = new int[5];
+		a[0]=9;
+		
+		//a[1] = "rerer";
+		
+		ArrayList<Integer> i = new ArrayList<Integer>(100);
+		
+		ArrayList al = new ArrayList();
+		
+		ArrayList<String> sl = new ArrayList<String>();
+		sl.add("4");
+		sl.add("Hello");
+		sl.add("Hello4");
+		sl.add("Hello3");
+		sl.add("Hello2");
+		
+		al.add(4);
+		al.add(4);
+		al.add(4);
+		al.add(4);
+		al.add(4);
+		al.add(4);
+		al.add(4);
+		
+		
+		Object t = new Object();
+		
+
+		
+		System.out.println("List "+ al);
+		
+		//for(int i = 0; i<=length ;i++)
+		
+		for(String name : sl) {
+			System.out.println(name);
+		}
+		
+	}
+	
+	
+
+	
+	
+
+}
